@@ -1,0 +1,20 @@
+Week one [Front end (Rishav , Bal )]
+
+ wireframe Development  Sunday 
+-> UI/UX using Figman (ramro wala)   Monday , Tuesday  
+-> front end Starting  (git_hub setup , Choosing fonts , colour sceam , icon packs , component library etc) wednesday
+-> Login Page development Thursday , friday 
+
+
+
+week one [backend (Nimesh , aarsan)]
+Learniing User management ,, 
+Logic of login and trying different aproach in a boilerplate code 
+
+
+Week 2 [front end ] = making Home page to all other page (Connecting all pages ) 
+Week 2 [Backend end ] = Applying backend in Login page to Home page  
+
+
+
+

@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  text-align: center;
+  padding: 2rem;
+}
+
+.container {
+  background: white;
+  padding: 2rem;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.voting-buttons {
+  margin: 1.5rem 0;
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  margin: 0 0.5rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+}
+
+#agreeBtn {
+  background-color: #28a745;
+}
+
+#agreeBtn:hover {
+  background-color: #218838;
+}
+
+#notAgreeBtn {
+  background-color: #dc3545;
+}
+
+#notAgreeBtn:hover {
+  background-color: #c82333;
+}
+
+.results {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voting System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Do you agree with the policy?</h1>
+    
+    <div class="voting-buttons">
+      <button id="agreeBtn" onclick="vote('agree')">Agreed</button>
+      <button id="notAgreeBtn" onclick="vote('not_agree')">Not Agreed</button>
+    </div>
+
+    <div class="results">
+      <p>Agreed: <span id="votesAgree">0</span></p>
+      <p>Not Agreed: <span id="votesNotAgree">0</span></p>
+      <p id="userChoice"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
