@@ -1,89 +1,4 @@
- 
-  function createStars() {
-    const starsContainer = document.getElementById('stars');
-    const starCount = 100;
-    
-    for (let i = 0; i < starCount; i++) {
-        const star = document.createElement('div');
-        star.className = 'star';
-        star.style.left = Math.random() * 100 + '%';
-        star.style.top = Math.random() * 100 + '%';
-        star.style.width = Math.random() * 3 + 1 + 'px';
-        star.style.height = star.style.width;
-        star.style.animationDelay = Math.random() * 3 + 's';
-        starsContainer.appendChild(star);
-    }
-}
 
-// Password toggle functionality
-const passwordToggle = document.getElementById('passwordToggle');
-const passwordInput = document.getElementById('password');
-
-passwordToggle.addEventListener('click', function() {
-    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-    passwordInput.setAttribute('type', type);
-    passwordToggle.textContent = type === 'password' ? '👁' : '🙈';
-});
-
-// Form submission
-document.getElementById('loginForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    
-    // Simulate login process
-    const signInBtn = document.querySelector('.sign-in-btn');
-    signInBtn.textContent = 'Signing in...';
-    signInBtn.disabled = true;
-    
-    setTimeout(() => {
-        alert(`Welcome to Votix!\nEmail: ${email}`);
-        signInBtn.textContent = 'Sign in';
-        signInBtn.disabled = false;
-    }, 1500);
-});
-
-// Google sign in
-document.getElementById('googleSignIn').addEventListener('click', function() {
-    alert('Google Sign-In would be implemented here');
-});
-
-// Sign up link
-document.getElementById('signupLink').addEventListener('click', function(e) {
-    e.preventDefault();
-    alert('Sign up page would open here');
-});
-
-// Create floating particles
-function createParticles() {
-    for (let i = 0; i < 5; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = Math.random() * 100 + '%';
-        particle.style.width = Math.random() * 4 + 2 + 'px';
-        particle.style.height = particle.style.width;
-        particle.style.background = `rgba(102, 126, 234, ${Math.random() * 0.5 + 0.2})`;
-        particle.style.animationDelay = Math.random() * 6 + 's';
-        document.body.appendChild(particle);
-    }
-}
-
-// Initialize everything
-createStars();
-createParticles();
-
-// Add input focus effects
-const inputs = document.querySelectorAll('.form-input');
-inputs.forEach(input => {
-    input.addEventListener('focus', function() {
-        this.parentElement.style.transform = 'scale(1.02)';
-    });
-    
-    input.addEventListener('blur', function() {
-        this.parentElement.style.transform = 'scale(1)';
-    });
-});
 // ------------------------------side-bar ko toggle ko lagi js -------------------------
 
   function toggleChannelList() {
@@ -109,3 +24,27 @@ inputs.forEach(input => {
   }
 
 
+
+// Firebase ko laghi config and API keys 
+
+  // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDs-1Fd-gfEw50nCX7mBLnoHX9ilBRODg4",
+  authDomain: "votix2.firebaseapp.com",
+  projectId: "votix2",
+  storageBucket: "votix2.firebasestorage.app",
+  messagingSenderId: "736358030362",
+  appId: "1:736358030362:web:744ce28517f3a52d4085a3",
+  measurementId: "G-87BLQNM2TB"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
