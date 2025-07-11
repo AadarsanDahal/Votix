@@ -50,7 +50,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     signInBtn.disabled = true;
     
     setTimeout(() => {
-        alert(`Welcome to Votix!\nEmail: ${email}`);
+       
         signInBtn.textContent = 'Sign in';
         signInBtn.disabled = false;
     }, 1500);
@@ -60,15 +60,15 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
 });
 
 // Google sign in
-document.getElementById('googleSignIn').addEventListener('click', function() {
-    alert('Google Sign-In would be implemented here');
-});
+// document.getElementById('googleSignIn').addEventListener('click', function() {
+//     alert('Google Sign-In would be implemented here');
+// });
 
-// Sign up link
-document.getElementById('signupLink').addEventListener('click', function(e) {
-    e.preventDefault();
-    alert('Sign up page would open here');
-});
+// // Sign up link
+// document.getElementById('signupLink').addEventListener('click', function(e) {
+//     e.preventDefault();
+//     alert('Sign up page would open here');
+// });
 
 // Create floating particles
 function createParticles() {
