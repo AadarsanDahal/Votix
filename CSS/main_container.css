@@ -1,0 +1,336 @@
+.main-content {
+    margin-left: 260px;
+    margin-top: 70px;
+    padding: 20px;
+    min-height: calc(100vh - 70px);
+    background-color: #000;
+    overscroll-behavior: none;
+    height: 100%;
+    
+
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.content-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #eae5e5;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-tab {
+    padding: 10px 20px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 25px;
+    color: #888;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-tab.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+}
+
+.filter-tab:hover {
+    background: #333;
+    color: #ccc;
+}
+
+.posts-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+ /* ================= DEBATE POST STYLES ================= */
+ .debate-post {
+    background: #1a1a1a;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    border: 1px solid #2a2a2a;
+    transition: all 0.3s ease;
+}
+
+.debate-post:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border-color: #3a3a3a;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.username {
+    font-weight: 600;
+    font-size: 15px;
+    color: #ffffff;
+    margin-bottom: 2px;
+}
+
+.timestamp {
+    font-size: 13px;
+    color: #888;
+}
+
+.post-content {
+    margin-bottom: 20px;
+}
+
+.debate-topic {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.topic-category {
+    display: inline-block;
+    background: #2a2a2a;
+    color: #888;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.debate-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding: 16px;
+    background: #141414;
+    border-radius: 12px;
+    border: 1px solid #2a2a2a;
+}
+
+.opinion-button {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    background: transparent;
+    color: #ccc;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.opinion-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.opinion-button.agree {
+    border-color: #22c55e;
+    color: #22c55e;
+}
+
+.opinion-button.agree:hover {
+    background: rgba(34, 197, 94, 0.1);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2);
+}
+
+.opinion-button.neutral {
+    border-color: #f59e0b;
+    color: #f59e0b;
+}
+
+.opinion-button.neutral:hover {
+    background: rgba(245, 158, 11, 0.1);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+}
+
+.opinion-button.disagree {
+    border-color: #ef4444;
+    color: #ef4444;
+}
+
+.opinion-button.disagree:hover {
+    background: rgba(239, 68, 68, 0.1);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+}
+
+.opinion-button.active {
+    background: currentColor;
+    color: #000;
+    font-weight: 600;
+}
+
+.opinion-count {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.post-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #2a2a2a;
+}
+
+.action-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border: none;
+    background: transparent;
+    color: #888;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.action-button:hover {
+    background: #2a2a2a;
+    color: #ccc;
+}
+
+.action-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.stats-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding: 12px;
+    background: #0f0f0f;
+    border-radius: 8px;
+    font-size: 12px;
+    color: #666;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.stat-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.stat-dot.agree { background: #22c55e; }
+.stat-dot.neutral { background: #f59e0b; }
+.stat-dot.disagree { background: #ef4444; }
+
+.comments-preview {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #2a2a2a;
+}
+
+.comment-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.comment-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ffa500 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.comment-content {
+    flex: 1;
+}
+
+.comment-author {
+    font-weight: 600;
+    font-size: 13px;
+    color: #ccc;
+    margin-bottom: 4px;
+}
+
+.comment-text {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #888;
+}
+
+.view-more {
+    color: #667eea;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.view-more:hover {
+    text-decoration: underline;
+}
+.opinion-button.agree.active {
+    background: #000;
+    color: #22c55e;
+    font-weight: 600;
+  }
+  
+  .opinion-button.neutral.active {
+    background: #f59e0b;
+    color: #000;
+    font-weight: 600;
+  }
+  
+  .opinion-button.disagree.active {
+    background: #ef4444;
+    color: #000;
+    font-weight: 600;
+  }
