@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #0a0a0f;
+      padding: 26px 24px;
+      color: white;
+      border-bottom: 1px solid #2a2a2a;
+      z-index: 1000;
+  }
+  
+  .navbar-left,
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-name {
+    font-size: 1.5rem;
+  }
+  
+  .logo img {
+    width: 37px;
+    object-fit: cover;
+    height: 32px;
+    margin-right: 20px;
+    transform: scale(2);
+  }
+  
+  .search-bar {
+    position: relative;
+    flex: 1;
+    max-width: 500px;
+    margin: 0 20px;
+  }
+  
+  .search-bar i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #ffffff;
+    pointer-events: none;
+    font-size: 16px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 12px 16px 12px 45px; /* 👈 extra left padding for icon */
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: #333d42;
+    color: white;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  .search-bar input::placeholder {
+    color: #aaa;
+  }
+  
+  .search-bar input:focus {
+    background-color: #3d4a50;
+    box-shadow:  rgba(102, 126, 234, 0.6);
+    border: #667eea;;
+  }
+  
+  /* Right side buttons and icons */
+  .navbar-right i,
+  .navbar-right button,
+  .navbar-right img {
+    margin-left: 25px;
+    cursor: pointer;
+  }
+  
+  .navbar-right img {
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  .create-post-btn {
+    display: flex;
+    align-items: center;
+    padding:10px 10px;
+    gap: 10px;
+    background-color: #333d42;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: background 0.3s;
+  }
+  .navbar-right i{
+    font-size: 1.2rem;
+  }
+
+  .create-post-btn i{
+    margin: 0px;
+    font-size: 1.2rem;
+  }
+
+  
+  
+  .create-post-btn:hover {
+    background-color: #444f55;
+  }
+  
+
+  /* --------------------------------*/
+
+
+  .Main_side_bar{
+    background-color: #0a0a0f ;
+    color: white;
+  }
