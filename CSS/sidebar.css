@@ -49,6 +49,11 @@
 
   /* ----------------------------------------channels--------- */
 
+  .Ourteam-anchor{
+    text-decoration: none;
+    color: white;
+  }
+
 
   .sidebar-section {
     margin-top: 30px;
