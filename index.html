@@ -21,11 +21,12 @@
 <!-- -----------------------------------------Nav_bar------------------------------------------------ -->
     <div class="navbar">
         <!-- Left Side: Logo -->
-        <div class="navbar-left">
-          <div class="logo">
+        <div class="navbar-left ">
+          <a href="index.html" class="logo">
             <img src="/images/logo.png" alt="Logo">
             <span class="logo-name">Votix</span>
-          </div>
+          </a>
+          
         </div>
     
         <!-- Middle: Search Bar -->
@@ -73,19 +74,27 @@
 
   <ul class="interested-list" id="channel-list">
     <li class="channel-item">
-      <div class="channel-avatar">T</div>
+      <div class="channel-avatar">
+        <img src="/images/tech.jpg" alt="">
+      </div>
       <span>Tech News</span>
     </li>
     <li class="channel-item">
-      <div class="channel-avatar">C</div>
+      <div class="channel-avatar">
+        <img src="/images/creativeMind.jpg" alt="">
+      </div>
       <span>Creative Minds</span>
     </li>
     <li class="channel-item">
-      <div class="channel-avatar">G</div>
+      <div class="channel-avatar">
+        <img src="/images/gamingHub.jpg" alt="">
+      </div>
       <span>Gaming Hub</span>
     </li>
     <li class="channel-item">
-      <div class="channel-avatar">S</div>
+      <div class="channel-avatar">
+        <img src="/images/startUp.jpeg" alt="">
+      </div>
       <span>Startup Space</span>
     </li>
   </ul>
@@ -174,16 +183,18 @@
     <!-- Debate Post 1 -->
     <div class="debate-post">
         <div class="post-header">
-            <div class="avatar">JS</div>
+            <div class="avatar">
+              <img class="author-image" width="100%" src="/images/nimeshdaju.jpeg" alt="">
+            </div>
             <div class="user-info">
-                <div class="username">Jordan Smith</div>
+                <div class="username">Nimesh Adhikari</div>
                 <div class="timestamp">2 hours ago</div>
             </div>
         </div>
 
         <div class="post-content">
             <div class="debate-topic">
-               Will AI replace web development in next 4 years?
+               Will AI replace web development in next 10 years?
             </div>
             <div class="topic-category">Technology</div>
         </div>
@@ -204,17 +215,17 @@
         </div>
 
         <div class="debate-actions">
-            <button class="opinion-button agree" onclick="toggleOpinion(this, 'agree')">
+            <button class="opinion-button agree">
                 <i class="fas fa-check"></i>
                 <span>Agree</span>
                 <span class="opinion-count">127</span>
             </button>
-            <button class="opinion-button neutral" onclick="toggleOpinion(this, 'neutral')">
+            <button class="opinion-button neutral">
                 <i class="fas fa-minus"></i>
                 <span>Neutral</span>
                 <span class="opinion-count">69</span>
             </button>
-            <button class="opinion-button disagree" onclick="toggleOpinion(this, 'disagree')">
+            <button class="opinion-button disagree">
                 <i class="fas fa-times"></i>
                 <span>Disagree</span>
                 <span class="opinion-count">105</span>
@@ -222,7 +233,7 @@
         </div>
 
         <div class="post-actions">
-            <button class="action-button" onclick="toggleComments(this)">
+            <button class="action-button" ">
                 <i class="fas fa-comment action-icon"></i>
                 <span>Comment</span>
                 <span>24</span>
@@ -233,41 +244,24 @@
             </button>
         </div>
 
-        <div class="comments-preview" style="display: none;">
-            <div class="comment-item">
-                <div class="comment-avatar">MK</div>
-                <div class="comment-content">
-                    <div class="comment-author">Maria Kim</div>
-                    <div class="comment-text">I think regulation is necessary, but it shouldn't stifle innovation. We need balanced oversight.</div>
-                </div>
-            </div>
-            <div class="comment-item">
-                <div class="comment-avatar">TR</div>
-                <div class="comment-content">
-                    <div class="comment-author">Tom Rodriguez</div>
-                    <div class="comment-text">The pace of AI development is too fast for traditional regulatory frameworks. We need new approaches.</div>
-                </div>
-            </div>
-            <div class="view-more">View all 24 comments</div>
-           
-
-        </div>
     </div>
 
 
     <!-- Debate Post 2 -->
     <div class="debate-post">
       <div class="post-header">
-          <div class="avatar" style="background: linear-gradient(135deg, #ff6b6b 0%, #ffa500 100%);">AC</div>
+          <div class="avatar">
+            <img class="author-image" width="100%" src="/images/arsanRobot.jpeg" alt="">
+          </div>
           <div class="user-info">
-              <div class="username">Alex Chen</div>
+              <div class="username">Aadarshan Dahal</div>
               <div class="timestamp">4 hours ago</div>
           </div>
       </div>
 
       <div class="post-content">
           <div class="debate-topic">
-              Remote work should be the default option for all office-based jobs that can be performed digitally.
+            Remote work should be the default option for all office-based jobs that can be performed digitally.
           </div>
           <div class="topic-category">Workplace</div>
       </div>
@@ -275,106 +269,107 @@
       <div class="stats-bar">
           <div class="stat-item">
               <div class="stat-dot agree"></div>
-              <span>67% Agree</span>
+              <span>42% Agree</span>
           </div>
           <div class="stat-item">
               <div class="stat-dot neutral"></div>
-              <span>18% Neutral</span>
+              <span>23% Neutral</span>
           </div>
           <div class="stat-item">
               <div class="stat-dot disagree"></div>
-              <span>15% Disagree</span>
+              <span>35% Disagree</span>
           </div>
       </div>
 
       <div class="debate-actions">
-          <button class="opinion-button agree active" onclick="toggleOpinion(this, 'agree')">
+          <button class="opinion-button agree">
               <i class="fas fa-check"></i>
               <span>Agree</span>
-              <span class="opinion-count">203</span>
+              <span class="opinion-count">127</span>
           </button>
-          <button class="opinion-button neutral" onclick="toggleOpinion(this, 'neutral')">
+          <button class="opinion-button neutral">
               <i class="fas fa-minus"></i>
               <span>Neutral</span>
-              <span class="opinion-count">54</span>
+              <span class="opinion-count">69</span>
           </button>
-          <button class="opinion-button disagree" onclick="toggleOpinion(this, 'disagree')">
+          <button class="opinion-button disagree">
               <i class="fas fa-times"></i>
               <span>Disagree</span>
-              <span class="opinion-count">45</span>
+              <span class="opinion-count">105</span>
           </button>
       </div>
 
       <div class="post-actions">
-          <button class="action-button" onclick="toggleComments(this)">
+          <button class="action-button" ">
               <i class="fas fa-comment action-icon"></i>
               <span>Comment</span>
-              <span>47</span>
+              <span>24</span>
           </button>
           <button class="action-button">
               <i class="fas fa-share action-icon"></i>
               <span>Share</span>
           </button>
       </div>
+
   </div>
 
   <!-- Debate Post 3 -->
   <div class="debate-post">
-      <div class="post-header">
-          <div class="avatar" style="background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);">SM</div>
-          <div class="user-info">
-              <div class="username">Sarah Mitchell</div>
-              <div class="timestamp">6 hours ago</div>
-          </div>
-      </div>
+    <div class="post-header">
+        <div class="avatar">
+          <img class="author-image" width="100%" src="/images/risavDon.jpeg" alt="">
+        </div>
+        <div class="user-info">
+            <div class="username">Risav Adhikari</div>
+            <div class="timestamp">6 hours ago</div>
+        </div>
+    </div>
 
-      <div class="post-content">
-          <div class="debate-topic">
-            A CS/IT degree is not necessary to become a successful software developer.
-          </div>
-          <div class="topic-category">Education</div>
-      </div>
+    <div class="post-content">
+        <div class="debate-topic">
+          A CS/IT degree is not necessary to become a successful software developer.
+        </div>
+        <div class="topic-category">Education</div>
+    </div>
 
-      <div class="stats-bar">
-          <div class="stat-item">
-              <div class="stat-dot agree"></div>
-              <span>78% Agree</span>
-          </div>
-          <div class="stat-item">
-              <div class="stat-dot neutral"></div>
-              <span>12% Neutral</span>
-          </div>
-          <div class="stat-item">
-              <div class="stat-dot disagree"></div>
-              <span>10% Disagree</span>
-          </div>
-      </div>
+    <div class="stats-bar">
+        <div class="stat-item">
+            <div class="stat-dot agree"></div>
+            <span>42% Agree</span>
+        </div>
+        <div class="stat-item">
+            <div class="stat-dot neutral"></div>
+            <span>23% Neutral</span>
+        </div>
+        <div class="stat-item">
+            <div class="stat-dot disagree"></div>
+            <span>35% Disagree</span>
+        </div>
+    </div>
 
-      <div class="debate-actions">
-          <button class="opinion-button agree" onclick="toggleOpinion(this, 'agree')">
-              <i class="fas fa-check"></i>
-              <span>Agree</span>
-              <span class="opinion-count">312</span>
-          </button>
-          <button class="opinion-button neutral" onclick="toggleOpinion(this, 'neutral')">
-              <i class="fas fa-minus"></i>
-              <span>Neutral</span>
-              <span class="opinion-count">48</span>
-          </button>
-          <button class="opinion-button disagree" onclick="toggleOpinion(this, 'disagree')">
-              <i class="fas fa-times"></i>
-              <span>Disagree</span>
-              <span class="opinion-count">40</span>
-          </button>
+    <div class="debate-actions">
+        <button class="opinion-button agree">
+            <i class="fas fa-check"></i>
+            <span>Agree</span>
+            <span class="opinion-count">127</span>
+        </button>
+        <button class="opinion-button neutral">
+            <i class="fas fa-minus"></i>
+            <span>Neutral</span>
+            <span class="opinion-count">69</span>
+        </button>
+        <button class="opinion-button disagree">
+            <i class="fas fa-times"></i>
+            <span>Disagree</span>
+            <span class="opinion-count">105</span>
+        </button>
+    </div>
 
-          
-      </div>
-   
-      <div class="post-actions">
-        <button class="action-button" onclick="toggleComments(this)">
+    <div class="post-actions">
+        <button class="action-button" ">
             <i class="fas fa-comment action-icon"></i>
             <span>Comment</span>
-            <span>47</span>
+            <span>24</span>
         </button>
         <button class="action-button">
             <i class="fas fa-share action-icon"></i>
@@ -382,8 +377,73 @@
         </button>
     </div>
 
+</div>
 
+  <!-- Debate Post 4-->
+  <div class="debate-post">
+    <div class="post-header">
+        <div class="avatar">
+          <img class="author-image" width="100%" src="/images/rabihero.jpeg" alt="">
+        </div>
+        <div class="user-info">
+            <div class="username">BalKumar Shrestha</div>
+            <div class="timestamp">8 hours ago</div>
+        </div>
+    </div>
 
+    <div class="post-content">
+        <div class="debate-topic">
+          Dembélé truly deserves the 2025 Ballon d'Or more than anyone else.
+        </div>
+        <div class="topic-category">Sports</div>
+    </div>
+
+    <div class="stats-bar">
+        <div class="stat-item">
+            <div class="stat-dot agree"></div>
+            <span>42% Agree</span>
+        </div>
+        <div class="stat-item">
+            <div class="stat-dot neutral"></div>
+            <span>23% Neutral</span>
+        </div>
+        <div class="stat-item">
+            <div class="stat-dot disagree"></div>
+            <span>35% Disagree</span>
+        </div>
+    </div>
+
+    <div class="debate-actions">
+        <button class="opinion-button agree">
+            <i class="fas fa-check"></i>
+            <span>Agree</span>
+            <span class="opinion-count">127</span>
+        </button>
+        <button class="opinion-button neutral">
+            <i class="fas fa-minus"></i>
+            <span>Neutral</span>
+            <span class="opinion-count">69</span>
+        </button>
+        <button class="opinion-button disagree">
+            <i class="fas fa-times"></i>
+            <span>Disagree</span>
+            <span class="opinion-count">105</span>
+        </button>
+    </div>
+
+    <div class="post-actions">
+        <button class="action-button" ">
+            <i class="fas fa-comment action-icon"></i>
+            <span>Comment</span>
+            <span>24</span>
+        </button>
+        <button class="action-button">
+            <i class="fas fa-share action-icon"></i>
+            <span>Share</span>
+        </button>
+    </div>
+
+</div>
 
     
 </body>

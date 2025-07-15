@@ -6,8 +6,6 @@
     background-color: #000;
     overscroll-behavior: none;
     height: 100%;
-    
-
 }
 
 .content-header {
@@ -17,12 +15,14 @@
     margin-bottom: 30px;
     padding: 20px 0;
     border-bottom: 1px solid #2a2a2a;
+    
 }
 
 .content-title {
     font-size: 28px;
     font-weight: bold;
     color: #eae5e5;
+   
 }
 
 .filter-tabs {
@@ -76,20 +76,22 @@
 .post-header {
     display: flex;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
+    cursor: pointer;
 }
 
-.avatar {
-    width: 44px;
-    height: 44px;
+
+.avatar img {
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    object-fit: cover;
     margin-right: 12px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 16px;
+    border: 3px solid rgba(59, 130, 246, 0.5);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+   
+   
 }
 
 .user-info {
@@ -265,72 +267,11 @@
 .stat-dot.neutral { background: #f59e0b; }
 .stat-dot.disagree { background: #ef4444; }
 
-.comments-preview {
-    margin-top: 16px;
-    padding-top: 16px;
-    border-top: 1px solid #2a2a2a;
-}
 
-.comment-item {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 12px;
-}
 
-.comment-avatar {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #ff6b6b 0%, #ffa500 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: bold;
-}
 
-.comment-content {
-    flex: 1;
-}
 
-.comment-author {
-    font-weight: 600;
-    font-size: 13px;
-    color: #ccc;
-    margin-bottom: 4px;
-}
 
-.comment-text {
-    font-size: 14px;
-    line-height: 1.4;
-    color: #888;
-}
 
-.view-more {
-    color: #667eea;
-    font-size: 14px;
-    cursor: pointer;
-    font-weight: 500;
-    margin-top: 8px;
-}
-
-.view-more:hover {
-    text-decoration: underline;
-}
-.opinion-button.agree.active {
-    background: #000;
-    color: #22c55e;
-    font-weight: 600;
-  }
   
-  .opinion-button.neutral.active {
-    background: #f59e0b;
-    color: #000;
-    font-weight: 600;
-  }
   
-  .opinion-button.disagree.active {
-    background: #ef4444;
-    color: #000;
-    font-weight: 600;
-  }
