@@ -7,10 +7,12 @@
   <link rel="stylesheet" href="CSS/navbar.css">
   <link rel="stylesheet" href="/CSS/sidebar.css">
   <link rel="stylesheet" href="/CSS/main_container.css">
+  <link rel="stylesheet" href="profile.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 
     <script src="script/sidebar.js" defer></script> 
+    <script src="script/navbar.js" defer></script> 
     <script></script>
 
   
@@ -37,23 +39,31 @@
     
         <!-- Right Side: Create Post, Notification, Profile -->
         <div class="navbar-right">
-
-         <button class="create-post-btn">
-          <i class="fa-solid fa-plus"></i>
-          Create Post
-        </button>
-           <i class="fas fa-bell"></i>
-          <img src="/images/boy.png" alt="Profile">
+          <button class="create-post-btn">
+            <i class="fa-solid fa-plus"></i>
+            Create Post
+          </button>
+      
+          <i class="fas fa-bell"></i>
+      
+          <div class="nav-profile" onclick="toggleProfileMenu(event)">
+            <img src="/images/boy.png" alt="Profile" class="profile-icon" />
+            <div id="profileDropdown" class="profile-dropdown hidden">
+              <a href="/profile.html">👤 View Profile</a>
+              <a href="/settings.html">⚙️ Settings</a>
+              <a href="#" onclick="toggleTheme()">🌗 Toggle Theme</a>
+              <a href="/login_page.html">🚪 Logout</a>
+            </div>
+          </div>
         </div>
       </div>
 <!-- --------------------------------------------------------------------------------------------------- -->
-
 
 <div class="sidebar">
   <ul class="main-side-bar">
     <li class="side-bar-item">
       <img src="/images/homeIcon.png" alt="">
-      <span>Home</span>
+     <a href="/index.html"> <span>Home</span></a>
     </li>
     <li class="side-bar-item">
      <img src="/images/trending.png" alt="">
@@ -317,7 +327,7 @@
   <div class="debate-post">
     <div class="post-header">
         <div class="avatar">
-          <img class="author-image" width="100%" src="/images/risavDon.jpeg" alt="">
+          <a href="/profile.html"> <img src="/images/risavDon.jpeg" alt="User" /></a>
         </div>
         <div class="user-info">
             <div class="username">Risav Adhikari</div>

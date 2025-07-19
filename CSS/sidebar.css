@@ -5,7 +5,7 @@
   left: 0;
   width: 260px;
   height: calc(100vh - 70px);
-  background-color: #0a0a0f;
+  background-color: #000000;
   padding: 20px 10px;
   border-bottom: 1px solid #2a2a2a;
   overflow-y: auto;         
