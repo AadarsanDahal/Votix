@@ -72,11 +72,13 @@ body {
 
 /* Team Grid */
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-top: 60px;
-}
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 cards in one row */
+        gap: 40px;
+        margin-top: 60px;
+        justify-items: center; /* optional: centers items inside their grid cell */
+    }
+
 
 /* Team Member Card */
 .team-member {
@@ -95,6 +97,8 @@ body {
 .team-member:nth-child(2) { animation-delay: 0.2s; }
 .team-member:nth-child(3) { animation-delay: 0.4s; }
 .team-member:nth-child(4) { animation-delay: 0.6s; }
+
+
 
 .team-member::before {
     content: '';
