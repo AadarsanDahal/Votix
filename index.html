@@ -7,12 +7,14 @@
   <link rel="stylesheet" href="CSS/navbar.css">
   <link rel="stylesheet" href="/CSS/sidebar.css">
   <link rel="stylesheet" href="/CSS/main_container.css">
-  <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="/CSS/profile.css">
+  <link rel="stylesheet" href="/CSS/createpost.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 
     <script src="script/sidebar.js" defer></script> 
     <script src="script/navbar.js" defer></script> 
+    <script src="script/createpost.js" defer></script> 
     <script></script>
 
   
@@ -39,7 +41,7 @@
     
         <!-- Right Side: Create Post, Notification, Profile -->
         <div class="navbar-right">
-          <button class="create-post-btn">
+          <button class="create-post-btn" onclick="openCreateModal()">
             <i class="fa-solid fa-plus"></i>
             Create Post
           </button>
@@ -58,6 +60,42 @@
         </div>
       </div>
 <!-- --------------------------------------------------------------------------------------------------- -->
+
+<!-- Create Post Modal -->
+<div id="createPostModal" class="modal-overlay hidden">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Create New Debate</h2>
+      <span class="close-btn" onclick="closeCreateModal()">&times;</span>
+    </div>
+
+    <div class="modal-body">
+      <label>Debate Topic *</label>
+      <textarea placeholder="What would you like to debate about?" maxlength="280"></textarea>
+
+      <label>Category *</label>
+      <select>
+        <option disabled selected>Select a category</option>
+        <option value="technology">Technology</option>
+        <option value="education">Education</option>
+        <option value="society">Society</option>
+        <option value="sports">Sports</option>
+      </select>
+
+      <label>Additional Context (Optional)</label>
+      <textarea placeholder="Provide more context for your debate..." maxlength="500"></textarea>
+    </div>
+
+    <div class="modal-footer">
+      <button class="cancel-btn" onclick="closeCreateModal()">Cancel</button>
+      <button class="create-btn">Create Post</button>
+    </div>
+  </div>
+</div>
+
+
+
+
 
 
 <div class="sidebar">
