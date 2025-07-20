@@ -1,0 +1,58 @@
+ /* Light mode base */
+ body:not(.dark-mode) {
+     background-color: white;
+     color: black;
+ }
+
+ /* Navbar */
+ body:not(.dark-mode) .navbar {
+     background-color: #f2f2f2;
+     color: black;
+ }
+
+ /* Sidebar */
+ body:not(.dark-mode) .sidebar {
+     background-color: #e9e9e9;
+     color: black;
+ }
+
+ /* Sidebar items */
+ body:not(.dark-mode) .channel-item,
+ body:not(.dark-mode) .side-bar-item {
+     background-color: transparent;
+     color: black;
+ }
+
+ /* Main content */
+ body:not(.dark-mode) .main-content {
+     background-color: #fefefe;
+     color: black;
+ }
+
+ /* Debate posts */
+ body:not(.dark-mode) .debate-post {
+     background-color: #f9f9f9;
+     color: black;
+     border-color: #ccc;
+ }
+
+ /* Filter tabs */
+ body:not(.dark-mode) .filter-tab {
+     background-color: #eaeaea;
+     color: black;
+ }
+
+ /* Buttons */
+ body:not(.dark-mode) button {
+     background-color: #ffffff;
+     color: black;
+     border: 1px solid #ccc;
+ }
+
+ .navbar,
+ .sidebar,
+ .main-content,
+ .debate-post,
+ button {
+     transition: background-color 0.3s, color 0.3s;
+ }

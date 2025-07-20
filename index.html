@@ -1,460 +1,467 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home page</title>
   <link rel="stylesheet" href="CSS/navbar.css">
   <link rel="stylesheet" href="/CSS/sidebar.css">
   <link rel="stylesheet" href="/CSS/main_container.css">
   <link rel="stylesheet" href="profile.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="CSS/darkmode.css">
 
 
-    <script src="script/sidebar.js" defer></script> 
-    <script src="script/navbar.js" defer></script> 
-    <script></script>
-
-  
-
-  </head>
-  <body>
-    
-<!-- -----------------------------------------Nav_bar------------------------------------------------ -->
-    <div class="navbar">
-        <!-- Left Side: Logo -->
-        <div class="navbar-left ">
-          <a href="index.html" class="logo">
-            <img src="/images/logo.png" alt="Logo">
-            <span class="logo-name">Votix</span>
-          </a>
-          
-        </div>
-    
-        <!-- Middle: Search Bar -->
-        <div class="search-bar">
-          <i class="fas fa-search"></i>
-          <input type="text" placeholder="Search... " class="my-input">
-        </div>
-    
-        <!-- Right Side: Create Post, Notification, Profile -->
-        <div class="navbar-right">
-          <button class="create-post-btn">
-            <i class="fa-solid fa-plus"></i>
-            Create Post
-          </button>
-      
-          <i class="fas fa-bell"></i>
-      
-          <div class="nav-profile" onclick="toggleProfileMenu(event)">
-            <img src="/images/boy.png" alt="Profile" class="profile-icon" />
-            <div id="profileDropdown" class="profile-dropdown hidden">
-              <a href="/profile.html">👤 View Profile</a>
-              <a href="/settings.html">⚙️ Settings</a>
-              <a href="#" onclick="toggleTheme()">🌗 Toggle Theme</a>
-              <a href="/login_page.html">🚪 Logout</a>
-            </div>
-          </div>
-        </div>
-      </div>
-<!-- --------------------------------------------------------------------------------------------------- -->
-
-<div class="sidebar">
-  <ul class="main-side-bar">
-    <li class="side-bar-item">
-      <img src="/images/homeIcon.png" alt="">
-     <a href="/index.html"> <span>Home</span></a>
-    </li>
-    <li class="side-bar-item">
-     <img src="/images/trending.png" alt="">
-      <span>Trending</span>
-    </li>
-    <li class="side-bar-item">
-    <img src="/images/explore.png" alt="">
-      <span>Explore</span>
-    </li>
-  </ul>
-
-<!-- Interested Channels Section with Toggle -->
-<div class="sidebar-section">
-  <div class="sidebar-heading toggle-header" onclick="toggleChannelList()">
-    Your Channels
-    <i id="channel-toggle-icon" class="fas fa-chevron-down"></i>
-  </div>
-
-  <ul class="interested-list" id="channel-list">
-    <li class="channel-item">
-      <div class="channel-avatar">
-        <img src="/images/tech.jpg" alt="">
-      </div>
-      <span>Tech News</span>
-    </li>
-    <li class="channel-item">
-      <div class="channel-avatar">
-        <img src="/images/creativeMind.jpg" alt="">
-      </div>
-      <span>Creative Minds</span>
-    </li>
-    <li class="channel-item">
-      <div class="channel-avatar">
-        <img src="/images/gamingHub.jpg" alt="">
-      </div>
-      <span>Gaming Hub</span>
-    </li>
-    <li class="channel-item">
-      <div class="channel-avatar">
-        <img src="/images/startUp.jpeg" alt="">
-      </div>
-      <span>Startup Space</span>
-    </li>
-  </ul>
-</div>
-
-<!-- Settings Section -->
-<div class="sidebar-section">
-  <div class="sidebar-heading toggle-header" onclick="toggleList('settings-list', 'settings-icon')">
-    Settings
-    <i id="settings-icon" class="fas fa-chevron-down"></i>
-  </div>
-  <ul class="interested-list" id="settings-list">
-    <li class="channel-item">
-      <i class="fas fa-user-cog"></i>
-      <span>Account</span>
-    </li>
-    <li class="channel-item">
-      <i class="fas fa-shield-alt"></i>
-      <span>Privacy</span>
-    </li>
-    <li class="channel-item">
-      <i class="fas fa-moon"></i>
-      <span>Appearance</span>
-    </li>
-  </ul>
-</div>
-
-<!-- About Us Section -->
+  <script src="script/sidebar.js" defer></script>
+  <script src="script/navbar.js" defer></script>
+  <script src="script/darkmode.js"></script>
 
 
-  <div class="sidebar-section">
-    <div class="sidebar-heading toggle-header" onclick="toggleList('about-list', 'about-icon')">
-      About Votix
-      <i id="about-icon" class="fas fa-chevron-down"></i>
-    </div>
-    <ul class="interested-list" id="about-list">
-      <a href="/about_us_page.html" class="Ourteam-anchor">
-        <li class="channel-item"> <i class="fas fa-users"></i> <span>Our Team</span> </li>
+
+
+</head>
+
+<body>
+
+  <!-- -----------------------------------------Nav_bar------------------------------------------------ -->
+  <div class="navbar">
+    <!-- Left Side: Logo -->
+    <div class="navbar-left ">
+      <a href="index.html" class="logo">
+        <img src="/images/logo.png" alt="Logo">
+        <span class="logo-name">Votix</span>
       </a>
-      <li class="channel-item">
-        <i class="fas fa-book"></i>
-        <span>Our Story</span>
+
+    </div>
+
+    <!-- Middle: Search Bar -->
+    <div class="search-bar">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Search... " class="my-input">
+    </div>
+
+    <!-- Right Side: Create Post, Notification, Profile -->
+    <div class="navbar-right">
+      <button class="create-post-btn">
+        <i class="fa-solid fa-plus"></i>
+        Create Post
+      </button>
+
+      <i class="fas fa-bell"></i>
+
+      <div class="nav-profile" onclick="toggleProfileMenu(event)">
+        <img src="/images/boy.png" alt="Profile" class="profile-icon" />
+        <div id="profileDropdown" class="profile-dropdown hidden">
+          <a href="/profile.html">👤 View Profile</a>
+          <a href="/settings.html">⚙️ Settings</a>
+          <a href="#" onclick="toggleTheme()">🌗 Toggle Theme</a>
+          <a href="/login_page.html">🚪 Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- --------------------------------------------------------------------------------------------------- -->
+
+  <div class="sidebar">
+    <ul class="main-side-bar">
+      <li class="side-bar-item">
+        <img src="/images/homeIcon.png" alt="">
+        <a href="/index.html"> <span>Home</span></a>
+      </li>
+      <li class="side-bar-item">
+        <img src="/images/trending.png" alt="">
+        <span>Trending</span>
+      </li>
+      <li class="side-bar-item">
+        <img src="/images/explore.png" alt="">
+        <span>Explore</span>
       </li>
     </ul>
+
+    <!-- Interested Channels Section with Toggle -->
+    <div class="sidebar-section">
+      <div class="sidebar-heading toggle-header" onclick="toggleChannelList()">
+        Your Channels
+        <i id="channel-toggle-icon" class="fas fa-chevron-down"></i>
+      </div>
+
+      <ul class="interested-list" id="channel-list">
+        <li class="channel-item">
+          <div class="channel-avatar">
+            <img src="/images/tech.jpg" alt="">
+          </div>
+          <span>Tech News</span>
+        </li>
+        <li class="channel-item">
+          <div class="channel-avatar">
+            <img src="/images/creativeMind.jpg" alt="">
+          </div>
+          <span>Creative Minds</span>
+        </li>
+        <li class="channel-item">
+          <div class="channel-avatar">
+            <img src="/images/gamingHub.jpg" alt="">
+          </div>
+          <span>Gaming Hub</span>
+        </li>
+        <li class="channel-item">
+          <div class="channel-avatar">
+            <img src="/images/startUp.jpeg" alt="">
+          </div>
+          <span>Startup Space</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Settings Section -->
+    <div class="sidebar-section">
+      <div class="sidebar-heading toggle-header" onclick="toggleList('settings-list', 'settings-icon')">
+        Settings
+        <i id="settings-icon" class="fas fa-chevron-down"></i>
+      </div>
+      <ul class="interested-list" id="settings-list">
+        <li class="channel-item">
+          <i class="fas fa-user-cog"></i>
+          <span>Account</span>
+        </li>
+        <li class="channel-item">
+          <i class="fas fa-shield-alt"></i>
+          <span>Privacy</span>
+        </li>
+        <li class="channel-item" id="appearance-toggle">
+          <i class="fas fa-moon" id="appearance-icon"></i>
+          <span id="appearance-label">Appearance</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- About Us Section -->
+
+
+    <div class="sidebar-section">
+      <div class="sidebar-heading toggle-header" onclick="toggleList('about-list', 'about-icon')">
+        About Votix
+        <i id="about-icon" class="fas fa-chevron-down"></i>
+      </div>
+      <ul class="interested-list" id="about-list">
+        <a href="/about_us_page.html" class="Ourteam-anchor">
+          <li class="channel-item"> <i class="fas fa-users"></i> <span>Our Team</span> </li>
+        </a>
+        <li class="channel-item">
+          <i class="fas fa-book"></i>
+          <span>Our Story</span>
+        </li>
+      </ul>
+    </div>
+
+
+
+    <!-- Contact / Feedback Section -->
+    <div class="sidebar-section">
+      <div class="sidebar-heading toggle-header" onclick="toggleList('contact-list', 'contact-icon')">
+        Contact / Feedback
+        <i id="contact-icon" class="fas fa-chevron-down"></i>
+      </div>
+      <ul class="interested-list" id="contact-list">
+        <li class="channel-item">
+          <i class="fas fa-envelope"></i>
+          <span>Email Us</span>
+        </li>
+        <li class="channel-item">
+          <i class="fas fa-comment-dots"></i>
+          <span>Send Feedback</span>
+        </li>
+      </ul>
+    </div>
+
+
+
+
+
   </div>
 
-
-
-<!-- Contact / Feedback Section -->
-<div class="sidebar-section">
-  <div class="sidebar-heading toggle-header" onclick="toggleList('contact-list', 'contact-icon')">
-    Contact / Feedback
-    <i id="contact-icon" class="fas fa-chevron-down"></i>
-  </div>
-  <ul class="interested-list" id="contact-list">
-    <li class="channel-item">
-      <i class="fas fa-envelope"></i>
-      <span>Email Us</span>
-    </li>
-    <li class="channel-item">
-      <i class="fas fa-comment-dots"></i>
-      <span>Send Feedback</span>
-    </li>
-  </ul>
-</div>
-
-
-
-
-
-</div>
-
-<!-- ------------------------------Hero section------------ -->
-<div class="main-content">
-  <div class="content-header">
+  <!-- ------------------------------Hero section------------ -->
+  <div class="main-content">
+    <div class="content-header">
       <h1 class="content-title">Home Feed</h1>
       <div class="filter-tabs">
-          <div class="filter-tab active">Latest</div>
-          <div class="filter-tab">Hot</div>
-          <div class="filter-tab">Trending</div>
-          <div class="filter-tab">Following</div>
+        <div class="filter-tab active">Latest</div>
+        <div class="filter-tab">Hot</div>
+        <div class="filter-tab">Trending</div>
+        <div class="filter-tab">Following</div>
       </div>
-  </div>
+    </div>
 
-  <div class="posts-container">
-    <!-- Debate Post 1 -->
-    <div class="debate-post">
+    <div class="posts-container">
+      <!-- Debate Post 1 -->
+      <div class="debate-post">
         <div class="post-header">
-            <div class="avatar">
-              <img class="author-image" width="100%" src="/images/nimeshdaju.jpeg" alt="">
-            </div>
-            <div class="user-info">
-                <div class="username">Nimesh Adhikari</div>
-                <div class="timestamp">2 hours ago</div>
-            </div>
+          <div class="avatar">
+            <img class="author-image" width="100%" src="/images/nimeshdaju.jpeg" alt="">
+          </div>
+          <div class="user-info">
+            <div class="username">Nimesh Adhikari</div>
+            <div class="timestamp">2 hours ago</div>
+          </div>
         </div>
 
         <div class="post-content">
-            <div class="debate-topic">
-               Will AI replace web development in next 10 years?
-            </div>
-            <div class="topic-category">Technology</div>
+          <div class="debate-topic">
+            Will AI replace web development in next 10 years?
+          </div>
+          <div class="topic-category">Technology</div>
         </div>
 
         <div class="stats-bar">
-            <div class="stat-item">
-                <div class="stat-dot agree"></div>
-                <span>42% Agree</span>
-            </div>
-            <div class="stat-item">
-                <div class="stat-dot neutral"></div>
-                <span>23% Neutral</span>
-            </div>
-            <div class="stat-item">
-                <div class="stat-dot disagree"></div>
-                <span>35% Disagree</span>
-            </div>
+          <div class="stat-item">
+            <div class="stat-dot agree"></div>
+            <span>42% Agree</span>
+          </div>
+          <div class="stat-item">
+            <div class="stat-dot neutral"></div>
+            <span>23% Neutral</span>
+          </div>
+          <div class="stat-item">
+            <div class="stat-dot disagree"></div>
+            <span>35% Disagree</span>
+          </div>
         </div>
 
         <div class="debate-actions">
-            <button class="opinion-button agree">
-                <i class="fas fa-check"></i>
-                <span>Agree</span>
-                <span class="opinion-count">127</span>
-            </button>
-            <button class="opinion-button neutral">
-                <i class="fas fa-minus"></i>
-                <span>Neutral</span>
-                <span class="opinion-count">69</span>
-            </button>
-            <button class="opinion-button disagree">
-                <i class="fas fa-times"></i>
-                <span>Disagree</span>
-                <span class="opinion-count">105</span>
-            </button>
+          <button class="opinion-button agree">
+            <i class="fas fa-check"></i>
+            <span>Agree</span>
+            <span class="opinion-count">127</span>
+          </button>
+          <button class="opinion-button neutral">
+            <i class="fas fa-minus"></i>
+            <span>Neutral</span>
+            <span class="opinion-count">69</span>
+          </button>
+          <button class="opinion-button disagree">
+            <i class="fas fa-times"></i>
+            <span>Disagree</span>
+            <span class="opinion-count">105</span>
+          </button>
         </div>
 
         <div class="post-actions">
-            <button class="action-button" ">
-                <i class="fas fa-comment action-icon"></i>
-                <span>Comment</span>
-                <span>24</span>
-            </button>
-            <button class="action-button">
-                <i class="fas fa-share action-icon"></i>
-                <span>Share</span>
-            </button>
+          <button class="action-button" ">
+                <i class=" fas fa-comment action-icon"></i>
+            <span>Comment</span>
+            <span>24</span>
+          </button>
+          <button class="action-button">
+            <i class="fas fa-share action-icon"></i>
+            <span>Share</span>
+          </button>
         </div>
 
-    </div>
+      </div>
 
 
-    <!-- Debate Post 2 -->
-    <div class="debate-post">
-      <div class="post-header">
+      <!-- Debate Post 2 -->
+      <div class="debate-post">
+        <div class="post-header">
           <div class="avatar">
             <img class="author-image" width="100%" src="/images/arsanRobot.jpeg" alt="">
           </div>
           <div class="user-info">
-              <div class="username">Aadarshan Dahal</div>
-              <div class="timestamp">4 hours ago</div>
+            <div class="username">Aadarshan Dahal</div>
+            <div class="timestamp">4 hours ago</div>
           </div>
-      </div>
+        </div>
 
-      <div class="post-content">
+        <div class="post-content">
           <div class="debate-topic">
             Remote work should be the default option for all office-based jobs that can be performed digitally.
           </div>
           <div class="topic-category">Workplace</div>
-      </div>
+        </div>
 
-      <div class="stats-bar">
+        <div class="stats-bar">
           <div class="stat-item">
-              <div class="stat-dot agree"></div>
-              <span>42% Agree</span>
+            <div class="stat-dot agree"></div>
+            <span>42% Agree</span>
           </div>
           <div class="stat-item">
-              <div class="stat-dot neutral"></div>
-              <span>23% Neutral</span>
+            <div class="stat-dot neutral"></div>
+            <span>23% Neutral</span>
           </div>
           <div class="stat-item">
-              <div class="stat-dot disagree"></div>
-              <span>35% Disagree</span>
+            <div class="stat-dot disagree"></div>
+            <span>35% Disagree</span>
           </div>
-      </div>
+        </div>
 
-      <div class="debate-actions">
+        <div class="debate-actions">
           <button class="opinion-button agree">
-              <i class="fas fa-check"></i>
-              <span>Agree</span>
-              <span class="opinion-count">127</span>
+            <i class="fas fa-check"></i>
+            <span>Agree</span>
+            <span class="opinion-count">127</span>
           </button>
           <button class="opinion-button neutral">
-              <i class="fas fa-minus"></i>
-              <span>Neutral</span>
-              <span class="opinion-count">69</span>
+            <i class="fas fa-minus"></i>
+            <span>Neutral</span>
+            <span class="opinion-count">69</span>
           </button>
           <button class="opinion-button disagree">
-              <i class="fas fa-times"></i>
-              <span>Disagree</span>
-              <span class="opinion-count">105</span>
+            <i class="fas fa-times"></i>
+            <span>Disagree</span>
+            <span class="opinion-count">105</span>
           </button>
-      </div>
+        </div>
 
-      <div class="post-actions">
+        <div class="post-actions">
           <button class="action-button" ">
-              <i class="fas fa-comment action-icon"></i>
-              <span>Comment</span>
-              <span>24</span>
+              <i class=" fas fa-comment action-icon"></i>
+            <span>Comment</span>
+            <span>24</span>
           </button>
           <button class="action-button">
-              <i class="fas fa-share action-icon"></i>
-              <span>Share</span>
+            <i class="fas fa-share action-icon"></i>
+            <span>Share</span>
           </button>
+        </div>
+
       </div>
 
-  </div>
-
-  <!-- Debate Post 3 -->
-  <div class="debate-post">
-    <div class="post-header">
-        <div class="avatar">
-          <a href="/profile.html"> <img src="/images/risavDon.jpeg" alt="User" /></a>
-        </div>
-        <div class="user-info">
+      <!-- Debate Post 3 -->
+      <div class="debate-post">
+        <div class="post-header">
+          <div class="avatar">
+            <a href="/profile.html"> <img src="/images/risavDon.jpeg" alt="User" /></a>
+          </div>
+          <div class="user-info">
             <div class="username">Risav Adhikari</div>
             <div class="timestamp">6 hours ago</div>
+          </div>
         </div>
-    </div>
 
-    <div class="post-content">
-        <div class="debate-topic">
-          A CS/IT degree is not necessary to become a successful software developer.
+        <div class="post-content">
+          <div class="debate-topic">
+            A CS/IT degree is not necessary to become a successful software developer.
+          </div>
+          <div class="topic-category">Education</div>
         </div>
-        <div class="topic-category">Education</div>
-    </div>
 
-    <div class="stats-bar">
-        <div class="stat-item">
+        <div class="stats-bar">
+          <div class="stat-item">
             <div class="stat-dot agree"></div>
             <span>42% Agree</span>
-        </div>
-        <div class="stat-item">
+          </div>
+          <div class="stat-item">
             <div class="stat-dot neutral"></div>
             <span>23% Neutral</span>
-        </div>
-        <div class="stat-item">
+          </div>
+          <div class="stat-item">
             <div class="stat-dot disagree"></div>
             <span>35% Disagree</span>
+          </div>
         </div>
-    </div>
 
-    <div class="debate-actions">
-        <button class="opinion-button agree">
+        <div class="debate-actions">
+          <button class="opinion-button agree">
             <i class="fas fa-check"></i>
             <span>Agree</span>
             <span class="opinion-count">127</span>
-        </button>
-        <button class="opinion-button neutral">
+          </button>
+          <button class="opinion-button neutral">
             <i class="fas fa-minus"></i>
             <span>Neutral</span>
             <span class="opinion-count">69</span>
-        </button>
-        <button class="opinion-button disagree">
+          </button>
+          <button class="opinion-button disagree">
             <i class="fas fa-times"></i>
             <span>Disagree</span>
             <span class="opinion-count">105</span>
-        </button>
-    </div>
+          </button>
+        </div>
 
-    <div class="post-actions">
-        <button class="action-button" ">
-            <i class="fas fa-comment action-icon"></i>
+        <div class="post-actions">
+          <button class="action-button" ">
+            <i class=" fas fa-comment action-icon"></i>
             <span>Comment</span>
             <span>24</span>
-        </button>
-        <button class="action-button">
+          </button>
+          <button class="action-button">
             <i class="fas fa-share action-icon"></i>
             <span>Share</span>
-        </button>
-    </div>
-
-</div>
-
-  <!-- Debate Post 4-->
-  <div class="debate-post">
-    <div class="post-header">
-        <div class="avatar">
-          <img class="author-image" width="100%" src="/images/rabihero.jpeg" alt="">
+          </button>
         </div>
-        <div class="user-info">
+
+      </div>
+
+      <!-- Debate Post 4-->
+      <div class="debate-post">
+        <div class="post-header">
+          <div class="avatar">
+            <img class="author-image" width="100%" src="/images/rabihero.jpeg" alt="">
+          </div>
+          <div class="user-info">
             <div class="username">BalKumar Shrestha</div>
             <div class="timestamp">8 hours ago</div>
+          </div>
         </div>
-    </div>
 
-    <div class="post-content">
-        <div class="debate-topic">
-          Dembélé truly deserves the 2025 Ballon d'Or more than anyone else.
+        <div class="post-content">
+          <div class="debate-topic">
+            Dembélé truly deserves the 2025 Ballon d'Or more than anyone else.
+          </div>
+          <div class="topic-category">Sports</div>
         </div>
-        <div class="topic-category">Sports</div>
-    </div>
 
-    <div class="stats-bar">
-        <div class="stat-item">
+        <div class="stats-bar">
+          <div class="stat-item">
             <div class="stat-dot agree"></div>
             <span>42% Agree</span>
-        </div>
-        <div class="stat-item">
+          </div>
+          <div class="stat-item">
             <div class="stat-dot neutral"></div>
             <span>23% Neutral</span>
-        </div>
-        <div class="stat-item">
+          </div>
+          <div class="stat-item">
             <div class="stat-dot disagree"></div>
             <span>35% Disagree</span>
+          </div>
         </div>
-    </div>
 
-    <div class="debate-actions">
-        <button class="opinion-button agree">
+        <div class="debate-actions">
+          <button class="opinion-button agree">
             <i class="fas fa-check"></i>
             <span>Agree</span>
             <span class="opinion-count">127</span>
-        </button>
-        <button class="opinion-button neutral">
+          </button>
+          <button class="opinion-button neutral">
             <i class="fas fa-minus"></i>
             <span>Neutral</span>
             <span class="opinion-count">69</span>
-        </button>
-        <button class="opinion-button disagree">
+          </button>
+          <button class="opinion-button disagree">
             <i class="fas fa-times"></i>
             <span>Disagree</span>
             <span class="opinion-count">105</span>
-        </button>
-    </div>
+          </button>
+        </div>
 
-    <div class="post-actions">
-        <button class="action-button" ">
-            <i class="fas fa-comment action-icon"></i>
+        <div class="post-actions">
+          <button class="action-button" ">
+            <i class=" fas fa-comment action-icon"></i>
             <span>Comment</span>
             <span>24</span>
-        </button>
-        <button class="action-button">
+          </button>
+          <button class="action-button">
             <i class="fas fa-share action-icon"></i>
             <span>Share</span>
-        </button>
-    </div>
+          </button>
+        </div>
 
-</div>
+      </div>
 
-    
+
+
+
 </body>
+
 </html>
