@@ -1,6 +1,7 @@
 .main-content {
+    font-family: "Roboto", sans-serif;
     margin-left: 260px;
-    margin-top: 70px;
+    margin-top: 50px;
     padding: 20px;
     min-height: calc(100vh - 70px);
     background-color: #000;
@@ -34,32 +35,33 @@
     padding: 10px 20px;
     background: #1a1a1a;
     border: 1px solid #333;
-    border-radius: 25px;
-    color: #888;
+    border-radius: 11px;
+    color: #eaeaea;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .filter-tab.active {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: rgb(97, 80, 221);
     color: white;
-    border-color: #667eea;
+    
 }
 
 .filter-tab:hover {
-    background: #333;
-    color: #ccc;
+    opacity: 0.9;
+    color: #ffffff;
 }
 
 .posts-container {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 
  /* ================= DEBATE POST STYLES ================= */
  .debate-post {
-    background: #1a1a1a;
+    
+    background: hsl(0, 0%, 11%);
     border-radius: 16px;
     padding: 24px;
     margin-bottom: 24px;
@@ -100,8 +102,8 @@
 
 .username {
     font-weight: 600;
-    font-size: 15px;
-    color: #ffffff;
+    font-size: 1px;
+    color: hsl(0 0% 98%);
     margin-bottom: 2px;
 }
 
@@ -125,10 +127,10 @@
 .topic-category {
     display: inline-block;
     background: #2a2a2a;
-    color: #888;
+    color: #f7f7f7;
     padding: 4px 12px;
     border-radius: 20px;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -151,7 +153,7 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 12px 16px;
+    padding: 10px 12px;
     border: 1px solid #3a3a3a;
     border-radius: 8px;
     background: transparent;
@@ -236,7 +238,7 @@
 
 .action-button:hover {
     background: #2a2a2a;
-    color: #ccc;
+    color: #ffffff;
 }
 
 .action-icon {
@@ -252,7 +254,7 @@
     background: #0f0f0f;
     border-radius: 8px;
     font-size: 12px;
-    color: #666;
+    color: #fffcfc;
 }
 
 .stat-item {
