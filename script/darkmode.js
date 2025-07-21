@@ -26,3 +26,5 @@ document.addEventListener("DOMContentLoaded", () => {
         icon.classList.toggle("fa-moon", !isDark);
     });
 });
+// This script toggles dark mode on and off, saving the user's preference in localStorage.
+// It also updates the icon to reflect the current mode (sun for dark mode, moon for light mode).
