@@ -1,4 +1,3 @@
-/* Theme-based Color Overrides Only */
 
 body:not(.dark-mode) .username {
     color: #000;
@@ -29,6 +28,11 @@ body.dark-mode .navbar {
     color: white;
     border-bottom: 1px solid #404040;
 }
+
+body:not(.dark-mode) .logo-name {
+    color: black;
+}
+
 
 body:not(.dark-mode) .sidebar {
     background-color: #e9e9e9;
@@ -79,6 +83,12 @@ body:not(.dark-mode) .debate-post {
     color: black;
     border: 1px solid #ccc;
 }
+
+body:not(.dark-mode) .debate-topic {
+    background-color: #f9f9f9;
+    color: black;
+}
+
 
 body.dark-mode .debate-post {
     background-color: #000;
