@@ -269,7 +269,16 @@
 
 
 
+.debate_img{
 
+   display: block;
+  margin: 20px auto;       /* Centers horizontally */
+  max-width: 90%;          /* Responsive width */
+  border: 2px solid #ccc;  /* Subtle seamless border */
+  border-radius: 10px;     /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+
+}
 
 
 
