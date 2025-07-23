@@ -205,3 +205,39 @@
   border-radius: 8px;
   border: 2px solid #444;
 }
+.post-options {
+  position: relative;
+  margin-left: auto;
+}
+
+.dots-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.dots-menu {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 6px 12px;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.dots-menu.hidden {
+  display: none;
+}
+
+.delete-post-btn {
+  background: none;
+  color: #f87171;
+  border: none;
+  cursor: pointer;
+}

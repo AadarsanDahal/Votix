@@ -3,7 +3,7 @@
     margin-left: 260px;
     margin-top: 50px;
     padding: 20px;
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 0px);
     background-color: #000;
     overscroll-behavior: none;
     height: 100%;
@@ -275,9 +275,169 @@
 
 
 
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+      display: block;
+    }
+    
+    .sidebar {
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      z-index: 1500;
+    }
+    
+    .sidebar.show {
+      transform: translateX(0);
+    }
+    
+    .main-content {
+      margin-left: 0;
+      padding: 15px;
+    }
+    
+    .navbar {
+      padding: 15px 12px;
+      height: 65px;
+    }
+    
+    .main-content {
+      margin-top: 65px;
+    }
+    
+    .sidebar {
+      top: 65px;
+      height: calc(100vh - 65px);
+    }
+    
+    .logo-name {
+      font-size: 1.3rem;
+    }
+    
+    .logo img {
+      width: 30px;
+      height: 26px;
+      margin-right: 10px;
+      transform: scale(1.5);
+    }
+    
+    .search-bar {
+      max-width: 200px;
+      margin: 0 10px;
+    }
+    
+    .create-post-btn span {
+      display: none;
+    }
+    
+    .create-post-btn {
+      padding: 8px;
+    }
+    
+    .content-title {
+      font-size: 1.5rem;
+    }
+    
+    .filter-tabs {
+      overflow-x: auto;
+      padding-bottom: 5px;
+    }
+    
+    .debate-actions {
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    
+    .opinion-button {
+      font-size: 0.8rem;
+      padding: 6px 10px;
+    }
+    
+    .modal-content {
+      width: 95%;
+      margin: 10px;
+    }
+  }
 
+  /* Mobile portrait */
+  @media (max-width: 480px) {
+    .navbar {
+      padding: 12px 8px;
+      height: 60px;
+    }
+    
+    .main-content {
+      margin-top: 60px;
+      padding: 10px;
+    }
+    
+    .sidebar {
+      top: 60px;
+      height: calc(100vh - 60px);
+      width: 280px;
+    }
+    
+    .navbar-right i,
+    .navbar-right button,
+    .navbar-right img {
+      margin-left: 10px;
+    }
+    
+    .search-bar {
+      display: none;
+    }
+    
+    .logo-name {
+      font-size: 1.1rem;
+    }
+    
+    .logo img {
+      width: 25px;
+      height: 22px;
+      margin-right: 8px;
+      transform: scale(1.2);
+    }
+    
+    .debate-post {
+      padding: 15px;
+    }
+    
+    .debate-topic {
+      font-size: 1rem;
+    }
+    
+    .stats-bar {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .post-actions {
+      justify-content: space-around;
+    }
+    
+    .filter-tab {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+    
+    .content-title {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+    
+    .modal-header h2 {
+      font-size: 1.2rem;
+    }
+    
+    .image-upload-container {
+      padding: 20px;
+    }
+    
+    .upload-label i {
+      font-size: 36px;
+    }
+  }
 
-
+  
 
   
   
