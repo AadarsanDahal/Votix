@@ -43,6 +43,8 @@ body:not(.dark-mode) .sidebar {
     border-right: 1px solid #ccc;
 }
 
+
+
 body:not(.dark-mode) .channel-item,
 body:not(.dark-mode) .side-bar-item {
     background-color: transparent;
