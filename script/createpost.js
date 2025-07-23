@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Create post
+// Handle post creation with image Base64 conversion
 document.querySelector('.create-btn').addEventListener('click', function () {
   const topic = document.getElementById('debate-topic').value.trim();
   const category = document.getElementById('debate-category').value;
@@ -43,12 +43,29 @@ document.querySelector('.create-btn').addEventListener('click', function () {
     return;
   }
 
+  const files = Array.from(imageInput.files);
   const images = [];
-  Array.from(imageInput.files).forEach(file => {
-    const url = URL.createObjectURL(file);
-    images.push(url);
-  });
+  let loadedCount = 0;
 
+  if (files.length === 0) {
+    saveAndRenderPost(topic, category, context, []);
+    return;
+  }
+
+  files.forEach(file => {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      images.push(e.target.result);
+      loadedCount++;
+      if (loadedCount === files.length) {
+        saveAndRenderPost(topic, category, context, images);
+      }
+    };
+    reader.readAsDataURL(file);
+  });
+});
+
+function saveAndRenderPost(topic, category, context, images) {
   const postData = {
     id: Date.now(),
     topic,
@@ -63,14 +80,14 @@ document.querySelector('.create-btn').addEventListener('click', function () {
 
   renderPost(postData, true);
 
+  // Reset form
   document.getElementById('debate-topic').value = '';
   document.getElementById('debate-category').selectedIndex = 0;
   document.getElementById('debate-context').value = '';
-  imageInput.value = '';
+  document.getElementById('imageInput').value = '';
   document.getElementById('previewArea').innerHTML = '';
-
   closeCreateModal();
-});
+}
 
 function renderPost(data, save) {
   const post = document.createElement('div');
@@ -126,13 +143,12 @@ function renderPost(data, save) {
     </div>
   `;
 
-  // Add to UI
   document.querySelector('.posts-container').prepend(post);
 
-  // Add voting functionality
+  // Add voting logic
   addVotingLogic(post);
 
-  // Add delete functionality
+  // Delete logic
   const deleteBtn = post.querySelector('.delete-post-btn');
   deleteBtn.addEventListener('click', () => {
     const id = post.dataset.id;
