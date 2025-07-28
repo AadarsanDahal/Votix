@@ -42,6 +42,34 @@ body:not(.dark-mode) .sidebar {
     color: black;
     border-right: 1px solid #ccc;
 }
+/* Scrollbar here */
+/* SIDEBAR BASE SCROLL SETTINGS (for all browsers) */
+.sidebar {
+  overflow-y: auto;
+}
+
+/* LIGHT MODE – WebKit (Chrome, Brave, Edge, Safari) */
+body:not(.dark-mode) .sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+body:not(.dark-mode) .sidebar::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+body:not(.dark-mode) .sidebar::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 4px;
+  border: 1px solid #999;
+}
+
+/* LIGHT MODE – Firefox (and fallback for others) */
+body:not(.dark-mode) .sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: #aaa #f0f0f0; /* thumb, track */
+}
+
+
 
 
 
@@ -86,14 +114,29 @@ body:not(.dark-mode) .filter-tab {
     color: black;
 }
 
-body:not(.dark-mode) .search-bar {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
+/* Light mode search bar */
+
+body:not(.dark-mode) .search-bar i {
+    color: #666;
 }
 
 body:not(.dark-mode) .search-bar input {
-    color: black;
+
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    color: #333;
 }
+
+body:not(.dark-mode) .search-bar input::placeholder {
+    color: #999;
+}
+
+body:not(.dark-mode) .search-bar input:focus {
+    background-color: #fafafa;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+    border: 1px solid #667eea;
+}
+
 
 body:not(.dark-mode) .stats-bar {
     background-color: #f0f0f0;
@@ -128,6 +171,7 @@ body:not(.dark-mode) .profile-dropdown a {
 
 
 
+
 body:not(.dark-mode) .profile-dropdown a:hover {
     background-color: #f0f0f0;
 }
@@ -146,9 +190,17 @@ body:not(.dark-mode) .side-bar-item a {
 }
 
 
-body:not(.dark-mode) .channel-item i {
-    color: #666;
+
+/* Show/hide icons based on theme */
+body.dark-mode .light-icon {
+  display: none;
 }
+
+body:not(.dark-mode) .dark-icon {
+  display: none;
+}
+
+
 
 body:not(.dark-mode) .theme-toggle {
     background-color: #f0f0f0;
