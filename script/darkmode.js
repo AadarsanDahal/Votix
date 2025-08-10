@@ -1,30 +1,48 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const toggleItem = document.getElementById("appearance-toggle");
-    const icon = document.getElementById("appearance-icon");
 
-    // Load saved preference or default to dark mode
-    const saved = localStorage.getItem("darkMode");
-    const prefersDark = saved === null || saved === "true";
 
-    if (prefersDark) {
-        document.body.classList.add("dark-mode");
-        icon.classList.remove("fa-moon");
-        icon.classList.add("fa-sun");
-    } else {
-        document.body.classList.remove("dark-mode");
-        icon.classList.remove("fa-sun");
-        icon.classList.add("fa-moon");
-    }
+// Global function for navbar dropdown
+function toggleTheme() {
+    const isDark = document.body.classList.toggle("dark-mode");
+    localStorage.setItem("darkMode", isDark.toString());
+    updateIcons(isDark);
+}
 
-    // Handle toggle click
-    toggleItem.addEventListener("click", () => {
-        const isDark = document.body.classList.toggle("dark-mode");
-        localStorage.setItem("darkMode", isDark);
-
-        // Update icon
+// Update theme icons
+function updateIcons(isDark) {
+    const icons = document.querySelectorAll('#appearance-icon, .theme-toggle i, [id*="theme"] i');
+    icons.forEach(icon => {
         icon.classList.toggle("fa-sun", isDark);
         icon.classList.toggle("fa-moon", !isDark);
     });
+}
+
+// Initialize theme on page load
+function initializeTheme() {
+    const saved = localStorage.getItem("darkMode");
+    const prefersDark = saved === null || saved === "true";
+    
+    document.body.classList.toggle("dark-mode", prefersDark);
+    updateIcons(prefersDark);
+}
+
+// Setup when DOM loads
+document.addEventListener("DOMContentLoaded", () => {
+    initializeTheme();
+    
+    // Sidebar toggle
+    const sidebarToggle = document.getElementById("appearance-toggle");
+    if (sidebarToggle) {
+        sidebarToggle.addEventListener("click", (e) => {
+            e.preventDefault();
+            toggleTheme();
+        });
+    }
 });
-// This script toggles dark mode on and off, saving the user's preference in localStorage.
-// It also updates the icon to reflect the current mode (sun for dark mode, moon for light mode).
+
+// Initialize immediately if DOM already loaded
+if (document.readyState !== "loading") {
+    initializeTheme();
+}
+
+// Make toggleTheme globally available
+window.toggleTheme = toggleTheme;

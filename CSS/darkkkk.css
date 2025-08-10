@@ -218,3 +218,170 @@ body:not(.dark-mode) .content-title {
     color: black;
 }
 
+
+/* This css is for profile */
+body.dark-mode .profile-container,
+body:not(.light-mode) .profile-container {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .post-card,
+body:not(.light-mode) .post-card {
+  background-color: #1a1a25 !important;
+  border: 1px solid #2f2f3a !important;
+}
+
+body.dark-mode .tab-button,
+body:not(.light-mode) .tab-button {
+  background-color: #1a1a25 !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .tab-button.active,
+body:not(.light-mode) .tab-button.active {
+  background-color: rgb(114, 104, 192) !important;
+}
+
+body.dark-mode .post-title,
+body:not(.light-mode) .post-title {
+  color: #ffffff !important;
+}
+
+body.dark-mode .user-bio,
+body:not(.light-mode) .user-bio {
+  color: #cccccc !important;
+}
+
+body.dark-mode .username,
+body:not(.light-mode) .username {
+  color: #ffffff !important;
+}
+
+body.dark-mode .follow-btn,
+body:not(.light-mode) .follow-btn {
+  background-color: rgb(114, 104, 192) !important;
+}
+
+body.dark-mode .follow-btn:hover,
+body:not(.light-mode) .follow-btn:hover {
+  background-color: #7a6cd6 !important;
+}
+
+body.dark-mode .message-btn,
+body:not(.light-mode) .message-btn {
+  background-color: #2a2a3d !important;
+  color: #dddddd !important;
+  border: 1px solid #444444 !important;
+}
+
+body.dark-mode .message-btn:hover,
+body:not(.light-mode) .message-btn:hover {
+  background-color: #383851 !important;
+}
+
+body.dark-mode .profile-stats,
+body:not(.light-mode) .profile-stats {
+  color: #cccccc !important;
+}
+
+body.dark-mode .profile-stats div strong,
+body:not(.light-mode) .profile-stats div strong {
+  color: #ffffff !important;
+}
+
+body.dark-mode .post-meta,
+body:not(.light-mode) .post-meta {
+  color: #aaaaaa !important;
+}
+
+body.dark-mode .post-actions span,
+body:not(.light-mode) .post-actions span {
+  color: #cccccc !important;
+}
+
+body.dark-mode .profile-header,
+body:not(.light-mode) .profile-header {
+  border-bottom: 1px solid rgb(114, 104, 192) !important;
+}
+
+body.dark-mode .profile-picture img,
+body:not(.light-mode) .profile-picture img {
+  border: 2px solid rgb(114, 104, 192) !important;
+}
+
+/* LIGHT MODE STYLES */
+body:not(.dark-mode) .profile-container {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+body:not(.dark-mode) .post-card {
+  background-color: #fafafa !important;
+  border: 1px solid #dddddd !important;
+}
+
+body:not(.dark-mode) .tab-button {
+  background-color: #f5f5f5 !important;
+  color: #000000 !important;
+}
+
+body:not(.dark-mode) .tab-button.active {
+  background-color: #667eea !important;
+  color: white !important;
+}
+
+body:not(.dark-mode) .post-title {
+  color: #000000 !important;
+}
+
+body:not(.dark-mode) .user-bio {
+  color: #555555 !important;
+}
+
+body:not(.dark-mode) .username {
+  color: #000000 !important;
+}
+
+body:not(.dark-mode) .follow-btn {
+  background-color: #667eea !important;
+  color: white !important;
+}
+
+body:not(.dark-mode) .follow-btn:hover {
+  background-color: #5a6fd8 !important;
+}
+
+body:not(.dark-mode) .message-btn {
+  background-color: #f0f0f0 !important;
+  color: #333333 !important;
+  border: 1px solid #cccccc !important;
+}
+
+body:not(.dark-mode) .message-btn:hover {
+  background-color: #e0e0e0 !important;
+}
+
+body:not(.dark-mode) .profile-stats {
+  color: #555555 !important;
+}
+
+body:not(.dark-mode) .profile-stats div strong {
+  color: #000000 !important;
+}
+
+body:not(.dark-mode) .post-meta {
+  color: #666666 !important;
+}
+
+body:not(.dark-mode) .post-actions span {
+  color: #555555 !important;
+}
+
+body:not(.dark-mode) .profile-header {
+  border-bottom: 1px solid #dddddd !important;
+}
+
+body:not(.dark-mode) .profile-picture img {
+  border: 2px solid #667eea !important;
+}

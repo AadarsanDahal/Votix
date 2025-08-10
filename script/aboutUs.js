@@ -34,3 +34,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Event listener for scroll animations
 window.addEventListener('scroll', handleScrollAnimations);
+

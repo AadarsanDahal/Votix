@@ -13,8 +13,3 @@
     }
   });
 
-  function toggleTheme() {
-    // You can implement your own dark/light theme switch here
-    alert("Theme toggled! (You can replace this alert with actual code)");
-  }
-
