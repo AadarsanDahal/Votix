@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="CSS/navbar.css">
   <link rel="stylesheet" href="/CSS/sidebar.css">
   <link rel="stylesheet" href="/CSS/main_container.css">
-  <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="/CSS/profile.css">
+  <link rel="stylesheet" href="/CSS/createpost.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 
     <script src="script/sidebar.js" defer></script> 
     <script src="script/navbar.js" defer></script> 
-    <script></script>
+   
+
 
   
 
@@ -39,7 +45,7 @@
     
         <!-- Right Side: Create Post, Notification, Profile -->
         <div class="navbar-right">
-          <button class="create-post-btn">
+          <button class="create-post-btn" onclick="openCreateModal()">
             <i class="fa-solid fa-plus"></i>
             Create Post
           </button>
@@ -58,6 +64,7 @@
         </div>
       </div>
 <!-- --------------------------------------------------------------------------------------------------- -->
+
 
 <div class="sidebar">
   <ul class="main-side-bar">
@@ -197,10 +204,17 @@
       </div>
   </div>
 
-  <div class="posts-container">
+  <div class="posts-container" id="post-container">
+
+
+<!-- -----------------------yesko kam xaina aba kina vane aaba post dynamically update hunxa javascript bata tesile------ -->
+
+
+
     <!-- Debate Post 1 -->
     <div class="debate-post">
         <div class="post-header">
+          
             <div class="avatar">
               <img class="author-image" width="100%" src="/images/nimeshdaju.jpeg" alt="">
             </div>
@@ -208,6 +222,13 @@
                 <div class="username">Nimesh Adhikari</div>
                 <div class="timestamp">2 hours ago</div>
             </div>
+            <div class="post-options">
+              <button class="dots-btn" onclick="toggleDotsMenu(this)">⋮</button>
+              <div class="dots-menu hidden">
+                <button class="delete-post-btn">🗑 Delete Post</button>
+              </div>
+            </div>
+
         </div>
 
         <div class="post-content">
@@ -266,7 +287,7 @@
 
 
     <!-- Debate Post 2 -->
-    <div class="debate-post">
+    <!-- <div class="debate-post">
       <div class="post-header">
           <div class="avatar">
             <img class="author-image" width="100%" src="/images/arsanRobot.jpeg" alt="">
@@ -329,7 +350,7 @@
           </button>
       </div>
 
-  </div>
+  </div> -->
 
   <!-- Debate Post 3 -->
   <div class="debate-post">
@@ -462,7 +483,8 @@
     </div>
 
 </div>
-
+<script src="script/createpost.js" defer></script> 
+<script src="/script/debatePost.js" defer></script>
     
 </body>
 </html>

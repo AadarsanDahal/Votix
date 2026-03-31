@@ -1,4 +1,6 @@
 
+  //profile icon ko lagi js
+  
   function toggleProfileMenu() {
     const dropdown = document.getElementById("profileDropdown");
     dropdown.classList.toggle("hidden");
@@ -18,3 +20,6 @@
     alert("Theme toggled! (You can replace this alert with actual code)");
   }
 
+
+
+  
